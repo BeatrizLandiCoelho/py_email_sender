@@ -9,7 +9,7 @@ from email.mime.multipart import MIMEMultipart
 def send_email(subject, body, to):
     # Set up the email parameters
     msg = MIMEMultipart()
-    msg['From'] = "andressa.fideliscoelho@gmail.com"
+    msg['From'] = "emailtesteremailtester123@gmail.com"
     msg['To'] = to
     msg['Subject'] = subject
     msg.attach(MIMEText(body, 'plain'))
@@ -18,11 +18,11 @@ def send_email(subject, body, to):
     smtp_server = smtplib.SMTP('smtp.gmail.com', 587)
     smtp_server.ehlo()
     smtp_server.starttls()
-    smtp_server.login("andressa.fideliscoelho@gmail.com", "ihgxlnrazynkkcxq")
+    smtp_server.login("emailtesteremailtester123@gmail.com", "wykxeptrluwazmvr")
 
     # Send the email
     text = msg.as_string()
-    smtp_server.sendmail("andressa.fideliscoelho@gmail.com", to, text)
+    smtp_server.sendmail("emailtesteremailtester123@gmail.com", to, text)
 
     # Close the SMTP server
     smtp_server.quit()
